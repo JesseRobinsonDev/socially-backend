@@ -1,0 +1,39 @@
+[package]
+name = "socially-backend"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+redis = "0.21.5"
+serde_json = "1.0.82"
+sha2 = "0.10.2"
+hex = "0.4.3"
+dotenv = "0.15.0"
+rocket_cors = "0.5.2"
+rand = "0.8.5"
+
+[dependencies.reqwest]
+version = "0.11.11"
+features = ["blocking", "json"]
+
+[dependencies.serde]
+version = "1.0.130"
+features = ["derive"]
+
+[dependencies.rocket_contrib]
+version = "0.4.10"
+default-features = false
+features = ["json"]
+
+[dependencies.rocket]
+version = "0.4.11"
+
+[dependencies.uuid]
+version = "1.1.2"
+features = [
+    "v4",                # Lets you generate random UUIDs
+    "fast-rng",          # Use a faster (but still sufficiently random) RNG
+    "macro-diagnostics", # Enable better diagnostics for compile-time UUIDs
+]
